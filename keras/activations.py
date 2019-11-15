@@ -196,6 +196,23 @@ def linear(x):
     return x
 
 
+
+def mish(x):
+    """Mish Activation function.
+
+    # Arguments
+        x: Input tensor.
+
+    # Returns
+        The Mish Activation: x*tanh(softplus(x))
+
+    # References
+        - [Mish: A Self Regularized Non-Monotonic Neural Activation Function]
+           https://towardsdatascience.com/mish-8283934a72df
+    """
+    return x*K.tanh(K.softplus(x))
+
+
 def serialize(activation):
     return activation.__name__
 
